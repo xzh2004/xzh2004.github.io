@@ -93,7 +93,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xzh2004.github.io/2019/03/17/hello-world/" data-id="cjtcpzixi0000ngocmt2z75ek" class="article-share-link">Share</a>
+      <a data-url="http://xzh2004.github.io/2019/03/17/hello-world/" data-id="cjtcutk0r0000a4oc4qd1rnch" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,6 +126,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <a id="more"></a>
+<p>````C++</p>
+<h1 id="include"><a href="#include" class="headerlink" title="include "></a>include <cstdio></cstdio></h1><h1 id="include-1"><a href="#include-1" class="headerlink" title="include "></a>include <cstring></cstring></h1><h1 id="include-2"><a href="#include-2" class="headerlink" title="include "></a>include <cstdlib></cstdlib></h1><h1 id="include-3"><a href="#include-3" class="headerlink" title="include "></a>include <cmath></cmath></h1><h1 id="include-4"><a href="#include-4" class="headerlink" title="include "></a>include <iostream></iostream></h1><h1 id="include-5"><a href="#include-5" class="headerlink" title="include "></a>include <algorithm></algorithm></h1><h1 id="include-6"><a href="#include-6" class="headerlink" title="include "></a>include <map></map></h1><h1 id="include-7"><a href="#include-7" class="headerlink" title="include "></a>include <set></set></h1><h1 id="include-8"><a href="#include-8" class="headerlink" title="include "></a>include <queue></queue></h1><h1 id="include-9"><a href="#include-9" class="headerlink" title="include "></a>include <vector></vector></h1><p>using namespace std;</p>
+<p>template <typename _tp> inline void read(_Tp &amp;num);<br>template <typename _tp> inline _Tp ab(const _Tp &amp;x);<br>template <typename _tp> inline _Tp mx(const _Tp &amp;x, const _Tp &amp;y);<br>template <typename _tp> inline _Tp mn(const _Tp &amp;x, const _Tp &amp;y);<br>template <typename _tp> inline void swa(_Tp &amp;x, _Tp &amp;y);</typename></typename></typename></typename></typename></p>
+<p>typedef long long ll;</p>
+<p>int main(){<br>    freopen(“.in”, “r”, stdin);<br>    freopen(“.out”, “w”, stdout);</p>
+<pre><code>return 0;
+</code></pre><p>}</p>
+<p>template <typename _tp> inline void read(_Tp &amp;num){<br>    num = 0;<br>    char c = getchar();<br>    _Tp sign = 1;<br>    while(c &lt; ‘0’||c &gt; ‘9’){<br>        if(c == ‘-‘) sign = -1;<br>        c = getchar();<br>    }<br>    while(c &gt;= ‘0’&amp;&amp;c &lt;= ‘9’){<br>        num = (num &lt;&lt; 1) + (num &lt;&lt; 3) + (c ^ 48);<br>        c = getchar();<br>    }<br>    num *= sign;<br>}<br>template <typename _tp> inline _Tp ab(const _Tp &amp;x){<br>    return x &lt; 0 ? -x : x;<br>}<br>template <typename _tp> inline _Tp mx(const _Tp &amp;x, const _Tp &amp;y){<br>    return x &gt; y ? x : y;<br>}<br>template <typename _tp> inline _Tp mn(const _Tp &amp;x, const _Tp &amp;y){<br>    return x &lt; y ? x : y;<br>}<br>template <typename _tp> inline void swa(_Tp &amp;x, _Tp &amp;y){<br>    _Tp z = x;<br>    x = y;<br>    y = z;<br>}<br>````C++</typename></typename></typename></typename></typename></p>
 <h4 id="1-中国剩余定理-CRT"><a href="#1-中国剩余定理-CRT" class="headerlink" title="1.中国剩余定理(CRT)"></a>1.中国剩余定理(CRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \ <br> x\equiv a_2 (mod  m_2) \ <br> \vdots \\<br> x\equiv a_k (mod  m_k) \ <br>\end{matrix}\right.$</p>
 <h5 id="当-m1-m2-cdots-mk-为两两互质的整数时，"><a href="#当-m1-m2-cdots-mk-为两两互质的整数时，" class="headerlink" title="当$m1,m2,\cdots,mk$为两两互质的整数时，"></a>当$m1,m2,\cdots,mk$为两两互质的整数时，</h5><h5 id="令-M-prod-limits-i-1-k-m-i"><a href="#令-M-prod-limits-i-1-k-m-i" class="headerlink" title="令$ M=\prod\limits_{i=1}^{k}m_i $"></a>令$ M=\prod\limits_{i=1}^{k}m_i $</h5><h5 id="M-i-M-div-m-i"><a href="#M-i-M-div-m-i" class="headerlink" title="$M_i=M \div m_i $"></a>$M_i=M \div m_i $</h5><h5 id="t-i-times-M-i-times-t-i-equiv-1-mod-m-i"><a href="#t-i-times-M-i-times-t-i-equiv-1-mod-m-i" class="headerlink" title="$t_i \times M_i \times t_i \equiv 1 (mod m_i)$"></a>$t_i \times M_i \times t_i \equiv 1 (mod m_i)$</h5><h5 id="则x-sum-k-i-1-a-i-times-M-i-times-t-i"><a href="#则x-sum-k-i-1-a-i-times-M-i-times-t-i" class="headerlink" title="则x=\sum^k_{i=1} (a_i \times M_i \times t_i)"></a>则<script type="math/tex">x=\sum^k_{i=1} (a_i \times M_i \times t_i)</script></h5><h5 id="模板-Luogu-3868-TJOI2009-猜数字"><a href="#模板-Luogu-3868-TJOI2009-猜数字" class="headerlink" title="模板:Luogu 3868[TJOI2009] 猜数字"></a>模板:<a href="https://www.luogu.org/problemnew/show/P3868" target="_blank" rel="noopener">Luogu 3868[TJOI2009] 猜数字</a></h5><hr>
 <h4 id="2-扩展中国剩余定理-exCRT"><a href="#2-扩展中国剩余定理-exCRT" class="headerlink" title="2.扩展中国剩余定理(exCRT)"></a>2.扩展中国剩余定理(exCRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \ <br> x\equiv a_2 (mod  m_2) \ <br> \vdots \\<br> x\equiv a_k (mod  m_k) \ <br>\end{matrix}\right.$</p>
@@ -138,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xzh2004.github.io/2019/03/17/省选数论/" data-id="cjtcpzixn0001ngoc9ghwpprr" class="article-share-link">Share</a>
+      <a data-url="http://xzh2004.github.io/2019/03/17/省选数论/" data-id="cjtcutk0y0001a4ocnylslf0g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CRT-exCRT-Lucas-exLucas/">-CRT -exCRT -Lucas -exLucas</a></li></ul>
@@ -241,5 +249,22 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </body>
 </html>
