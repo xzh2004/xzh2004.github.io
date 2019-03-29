@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>省选数论 | Hexo</title>
+  <title>C++码风 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
-<meta name="keywords" content="数论">
+  <meta name="description" content="C++码风参考：google c++风格指南">
 <meta property="og:type" content="article">
-<meta property="og:title" content="省选数论">
-<meta property="og:url" content="http://xzh2004.github.io/2019/03/17/省选数论/index.html">
+<meta property="og:title" content="C++码风">
+<meta property="og:url" content="http://xzh2004.github.io/2019/03/29/C++代码风格/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
+<meta property="og:description" content="C++码风参考：google c++风格指南">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://xzh2004.github.io/2019/03/17/省选数论/同余方程组.png">
-<meta property="og:updated_time" content="2019-03-29T14:19:30.588Z">
+<meta property="og:updated_time" content="2019-03-29T14:19:58.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="省选数论">
-<meta name="twitter:description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
-<meta name="twitter:image" content="http://xzh2004.github.io/2019/03/17/省选数论/同余方程组.png">
+<meta name="twitter:title" content="C++码风">
+<meta name="twitter:description" content="C++码风参考：google c++风格指南">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -153,36 +150,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-省选数论" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++代码风格" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      省选数论
+      C++码风
     </h1>
   
 
         
-        <a href="/2019/03/17/省选数论/" class="archive-article-date">
-  	<time datetime="2019-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+        <a href="/2019/03/29/C++代码风格/" class="archive-article-date">
+  	<time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="1-中国剩余定理-CRT"><a href="#1-中国剩余定理-CRT" class="headerlink" title="1.中国剩余定理(CRT)"></a>1.中国剩余定理(CRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$<br><img src="同余方程组.png" alt="STL时间复杂度"></p>
-<h5 id="当-m1-m2-cdots-mk-为两两互质的整数时，"><a href="#当-m1-m2-cdots-mk-为两两互质的整数时，" class="headerlink" title="当$m1,m2,\cdots,mk$为两两互质的整数时，"></a>当$m1,m2,\cdots,mk$为两两互质的整数时，</h5><h5 id="令-M-prod-limits-i-1-k-m-i"><a href="#令-M-prod-limits-i-1-k-m-i" class="headerlink" title="令$ M=\prod\limits_{i=1}^{k}m_i $"></a>令$ M=\prod\limits_{i=1}^{k}m_i $</h5><h5 id="M-i-M-div-m-i"><a href="#M-i-M-div-m-i" class="headerlink" title="$M_i=M \div m_i $"></a>$M_i=M \div m_i $</h5><h5 id="t-i-times-M-i-times-t-i-equiv-1-mod-m-i"><a href="#t-i-times-M-i-times-t-i-equiv-1-mod-m-i" class="headerlink" title="$t_i \times M_i \times t_i \equiv 1 (mod m_i)$"></a>$t_i \times M_i \times t_i \equiv 1 (mod m_i)$</h5><h5 id="则x-sum-k-i-1-a-i-times-M-i-times-t-i"><a href="#则x-sum-k-i-1-a-i-times-M-i-times-t-i" class="headerlink" title="则x=\sum^k_{i=1} (a_i \times M_i \times t_i)"></a>则<script type="math/tex">x=\sum^k_{i=1} (a_i \times M_i \times t_i)</script></h5><h5 id="模板-Luogu-3868-TJOI2009-猜数字"><a href="#模板-Luogu-3868-TJOI2009-猜数字" class="headerlink" title="模板:Luogu 3868[TJOI2009] 猜数字"></a>模板:<a href="https://www.luogu.org/problemnew/show/P3868" target="_blank" rel="noopener">Luogu 3868[TJOI2009] 猜数字</a></h5><hr>
-<h4 id="2-扩展中国剩余定理-exCRT"><a href="#2-扩展中国剩余定理-exCRT" class="headerlink" title="2.扩展中国剩余定理(exCRT)"></a>2.扩展中国剩余定理(exCRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$</p>
-<hr>
-<h4 id="3-卢卡斯定理-Lucas"><a href="#3-卢卡斯定理-Lucas" class="headerlink" title="3.卢卡斯定理(Lucas)"></a>3.卢卡斯定理(Lucas)</h4><hr>
-<h4 id="4-扩展卢卡斯定理-exLucas"><a href="#4-扩展卢卡斯定理-exLucas" class="headerlink" title="4.扩展卢卡斯定理(exLucas)"></a>4.扩展卢卡斯定理(exLucas)</h4><hr>
-<h4 id="5-欧拉-Euler-定理"><a href="#5-欧拉-Euler-定理" class="headerlink" title="5.欧拉(Euler)定理"></a>5.欧拉(Euler)定理</h4><hr>
-<h4 id="6-快速傅里叶变换-FFT"><a href="#6-快速傅里叶变换-FFT" class="headerlink" title="6.快速傅里叶变换(FFT)"></a>6.快速傅里叶变换(FFT)</h4><hr>
-<h4 id="7-莫比乌斯反演"><a href="#7-莫比乌斯反演" class="headerlink" title="7.莫比乌斯反演"></a>7.莫比乌斯反演</h4>
+        <h3 id="C-码风"><a href="#C-码风" class="headerlink" title="C++码风"></a>C++码风</h3><h5 id="参考：google-c-风格指南"><a href="#参考：google-c-风格指南" class="headerlink" title="参考：google c++风格指南"></a>参考：<a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">google c++风格指南</a></h5><a id="more"></a>
+<h5 id="附缺省源一份："><a href="#附缺省源一份：" class="headerlink" title="附缺省源一份："></a>附缺省源一份：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;num)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">swa</span><span class="params">(_Tp &amp;x, _Tp &amp;y)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//freopen(".in", "r", stdin);</span></span><br><span class="line">	<span class="comment">//freopen(".out", "w", stdout);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;num)</span></span>&#123;</span><br><span class="line">    num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> c = getchar();</span><br><span class="line">    _Tp sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">'0'</span>||c &gt; <span class="string">'9'</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(c == <span class="string">'-'</span>) sign = <span class="number">-1</span>;</span><br><span class="line">        c = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">'0'</span>&amp;&amp;c &lt;= <span class="string">'9'</span>)&#123;</span><br><span class="line">        num = (num &lt;&lt; <span class="number">1</span>) + (num &lt;&lt; <span class="number">3</span>) + (c ^ <span class="number">48</span>);</span><br><span class="line">        c = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    num *= sign;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; <span class="number">0</span> ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">swa</span><span class="params">(_Tp &amp;x, _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    _Tp z = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = z;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -190,17 +180,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -214,15 +193,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/17/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
+    <a href="/2019/03/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
