@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>省选数论 | Hexo</title>
+  <title>ʡѡ���� | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
-<meta name="keywords" content="数论">
+  <meta name="description" content="1.�й�ʣ�ඨ��(CRT)">
+<meta name="keywords" content="����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="省选数论">
+<meta property="og:title" content="ʡѡ����">
 <meta property="og:url" content="http://xzh2004.github.io/2019/03/17/省选数论/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
+<meta property="og:description" content="1.�й�ʣ�ඨ��(CRT)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-29T14:23:46.251Z">
+<meta property="og:updated_time" content="2019-04-29T13:34:17.856Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="省选数论">
-<meta name="twitter:description" content="1.中国剩余定理(CRT)$ \left\{\begin{matrix} x\equiv a_1 (mod  m_1) \\ x\equiv a_2 (mod  m_2) \\ \vdots \\ x\equiv a_k (mod  m_k) \\\end{matrix}\right.$ 当$m1,m2,\cdots,mk$为两两互质的整数时，令$ M=\prod\limits_{i=1}^{k">
+<meta name="twitter:title" content="ʡѡ����">
+<meta name="twitter:description" content="1.�й�ʣ�ඨ��(CRT)">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      省选数论
+      ʡѡ����
     </h1>
   
 
@@ -171,16 +171,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h4 id="1-中国剩余定理-CRT"><a href="#1-中国剩余定理-CRT" class="headerlink" title="1.中国剩余定理(CRT)"></a>1.中国剩余定理(CRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$</p>
-<h5 id="当-m1-m2-cdots-mk-为两两互质的整数时，"><a href="#当-m1-m2-cdots-mk-为两两互质的整数时，" class="headerlink" title="当$m1,m2,\cdots,mk$为两两互质的整数时，"></a>当$m1,m2,\cdots,mk$为两两互质的整数时，</h5><h5 id="令-M-prod-limits-i-1-k-m-i"><a href="#令-M-prod-limits-i-1-k-m-i" class="headerlink" title="令$ M=\prod\limits_{i=1}^{k}m_i $"></a>令$ M=\prod\limits_{i=1}^{k}m_i $</h5><h5 id="M-i-M-div-m-i"><a href="#M-i-M-div-m-i" class="headerlink" title="$M_i=M \div m_i $"></a>$M_i=M \div m_i $</h5><h5 id="t-i-times-M-i-times-t-i-equiv-1-mod-m-i"><a href="#t-i-times-M-i-times-t-i-equiv-1-mod-m-i" class="headerlink" title="$t_i \times M_i \times t_i \equiv 1 (mod m_i)$"></a>$t_i \times M_i \times t_i \equiv 1 (mod m_i)$</h5><h5 id="则x-sum-k-i-1-a-i-times-M-i-times-t-i"><a href="#则x-sum-k-i-1-a-i-times-M-i-times-t-i" class="headerlink" title="则x=\sum^k_{i=1} (a_i \times M_i \times t_i)"></a>则<script type="math/tex">x=\sum^k_{i=1} (a_i \times M_i \times t_i)</script></h5><h5 id="模板-Luogu-3868-TJOI2009-猜数字"><a href="#模板-Luogu-3868-TJOI2009-猜数字" class="headerlink" title="模板:Luogu 3868[TJOI2009] 猜数字"></a>模板:<a href="https://www.luogu.org/problemnew/show/P3868" target="_blank" rel="noopener">Luogu 3868[TJOI2009] 猜数字</a></h5><hr>
-<h4 id="2-扩展中国剩余定理-exCRT"><a href="#2-扩展中国剩余定理-exCRT" class="headerlink" title="2.扩展中国剩余定理(exCRT)"></a>2.扩展中国剩余定理(exCRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$</p>
+        <h4 id="1-�й�ʣ�ඨ��-CRT"><a href="#1-�й�ʣ�ඨ��-CRT" class="headerlink" title="1.�й�ʣ�ඨ��(CRT)"></a>1.�й�ʣ�ඨ��(CRT)</h4><a id="more"></a>
+<p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$</p>
+<h5 id="��-m1-m2-cdots-mk-Ϊ�������ʵ�����ʱ��"><a href="#��-m1-m2-cdots-mk-Ϊ�������ʵ�����ʱ��" class="headerlink" title="��$m1,m2,\cdots,mk$Ϊ�������ʵ�����ʱ��"></a>��$m1,m2,\cdots,mk$Ϊ�������ʵ�����ʱ��</h5><h5 id="��-M-prod-limits-i-1-k-m-i"><a href="#��-M-prod-limits-i-1-k-m-i" class="headerlink" title="��$ M=\prod\limits_{i=1}^{k}m_i $"></a>��$ M=\prod\limits_{i=1}^{k}m_i $</h5><h5 id="M-i-M-div-m-i"><a href="#M-i-M-div-m-i" class="headerlink" title="$M_i=M \div m_i $"></a>$M_i=M \div m_i $</h5><h5 id="t-i-times-M-i-times-t-i-equiv-1-mod-m-i"><a href="#t-i-times-M-i-times-t-i-equiv-1-mod-m-i" class="headerlink" title="$t_i \times M_i \times t_i \equiv 1 (mod m_i)$"></a>$t_i \times M_i \times t_i \equiv 1 (mod m_i)$</h5><h5 id="��x-sum-k-i-1-a-i-times-M-i-times-t-i"><a href="#��x-sum-k-i-1-a-i-times-M-i-times-t-i" class="headerlink" title="��x=\sum^k_{i=1} (a_i \times M_i \times t_i)"></a>��<script type="math/tex">x=\sum^k_{i=1} (a_i \times M_i \times t_i)</script></h5><h5 id="g��-Luogu-3868-TJOI2009-������"><a href="#g��-Luogu-3868-TJOI2009-������" class="headerlink" title="ģ��:Luogu 3868[TJOI2009] ������"></a>ģ��:<a href="https://www.luogu.org/problemnew/show/P3868" target="_blank" rel="noopener">Luogu 3868[TJOI2009] ������</a></h5><hr>
+<h4 id="2-��չ�й�ʣ�ඨ��-exCRT"><a href="#2-��չ�й�ʣ�ඨ��-exCRT" class="headerlink" title="2.��չ�й�ʣ�ඨ��(exCRT)"></a>2.��չ�й�ʣ�ඨ��(exCRT)</h4><p>$ \left\{\begin{matrix}<br> x\equiv a_1 (mod  m_1) \\<br> x\equiv a_2 (mod  m_2) \\<br> \vdots \\<br> x\equiv a_k (mod  m_k) \\<br>\end{matrix}\right.$</p>
 <hr>
-<h4 id="3-卢卡斯定理-Lucas"><a href="#3-卢卡斯定理-Lucas" class="headerlink" title="3.卢卡斯定理(Lucas)"></a>3.卢卡斯定理(Lucas)</h4><hr>
-<h4 id="4-扩展卢卡斯定理-exLucas"><a href="#4-扩展卢卡斯定理-exLucas" class="headerlink" title="4.扩展卢卡斯定理(exLucas)"></a>4.扩展卢卡斯定理(exLucas)</h4><hr>
-<h4 id="5-欧拉-Euler-定理"><a href="#5-欧拉-Euler-定理" class="headerlink" title="5.欧拉(Euler)定理"></a>5.欧拉(Euler)定理</h4><hr>
-<h4 id="6-快速傅里叶变换-FFT"><a href="#6-快速傅里叶变换-FFT" class="headerlink" title="6.快速傅里叶变换(FFT)"></a>6.快速傅里叶变换(FFT)</h4><hr>
-<h4 id="7-莫比乌斯反演"><a href="#7-莫比乌斯反演" class="headerlink" title="7.莫比乌斯反演"></a>7.莫比乌斯反演</h4>
+<h4 id="3-¬��˹����-Lucas"><a href="#3-¬��˹����-Lucas" class="headerlink" title="3.¬��˹����(Lucas)"></a>3.¬��˹����(Lucas)</h4><hr>
+<h4 id="4-��չ¬��˹����-exLucas"><a href="#4-��չ¬��˹����-exLucas" class="headerlink" title="4.��չ¬��˹����(exLucas)"></a>4.��չ¬��˹����(exLucas)</h4><hr>
+<h4 id="5-y��-Euler-����"><a href="#5-y��-Euler-����" class="headerlink" title="5.ŷ��(Euler)����"></a>5.ŷ��(Euler)����</h4><hr>
+<h4 id="6-���ٸ���Ҷ�任-FFT"><a href="#6-���ٸ���Ҷ�任-FFT" class="headerlink" title="6.���ٸ���Ҷ�任(FFT)"></a>6.���ٸ���Ҷ�任(FFT)</h4><hr>
+<h4 id="7-I����˹����"><a href="#7-I����˹����" class="headerlink" title="7.Ī����˹����"></a>7.Ī����˹����</h4>
       
 
       
@@ -193,7 +193,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">����</a>
         		</li>
       		
 		</ul>
@@ -348,7 +348,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数论</a>
+                <a href="javascript:void(0)" class="js-tag color5">����</a>
               </li>
             
             <div class="clearfix"></div>
