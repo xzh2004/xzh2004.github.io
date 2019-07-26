@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>Archives: 2019 | Hexo</title>
+  <title>中国剩余定理(CRT) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://xzh2004.github.io/archives/2019/index.html">
+  <meta name="description" content="中国剩余定理(CRT) 有若干个人列队，三个一排会多出两个人，五个一排多三个人，七个一排多两个人，求人数至少是多少？">
+<meta name="keywords" content="数论,中国剩余定理(CRT),同余">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中国剩余定理(CRT)">
+<meta property="og:url" content="http://xzh2004.github.io/2019/03/17/中国剩余定理(CRT)/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="中国剩余定理(CRT) 有若干个人列队，三个一排会多出两个人，五个一排多三个人，七个一排多两个人，求人数至少是多少？">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T15:23:40.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="中国剩余定理(CRT)">
+<meta name="twitter:description" content="中国剩余定理(CRT) 有若干个人列队，三个一排会多出两个人，五个一排多三个人，七个一排多两个人，求人数至少是多少？">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -146,36 +151,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-中国剩余定理(CRT)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/中国剩余定理(CRT)/" class="archive-article-date">
-  	<time datetime="2019-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/中国剩余定理(CRT)/">中国剩余定理(CRT)</a>
+    <h1 class="article-title" itemprop="name">
+      中国剩余定理(CRT)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/17/中国剩余定理(CRT)/" class="archive-article-date">
+  	<time datetime="2019-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="中国剩余定理-CRT"><a href="#中国剩余定理-CRT" class="headerlink" title="中国剩余定理(CRT)"></a>中国剩余定理(CRT)</h1><blockquote>
+<p>有若干个人列队，三个一排会多出两个人，五个一排多三个人，七个一排多两个人，求人数至少是多少？</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="该问题本质上是解一元线性同余方程"><a href="#该问题本质上是解一元线性同余方程" class="headerlink" title="该问题本质上是解一元线性同余方程"></a>该问题本质上是解一元线性同余方程</h4><script type="math/tex; mode=display">\left\{\begin{matrix}
+ x\equiv a_1 (\mod \ m_1) \\ 
+ x\equiv a_2 (\mod \ m_2) \\ 
+ \vdots \\
+ x\equiv a_k (\mod \ m_k) \\ 
+\end{matrix}\right.</script><h4 id="当-m-1-m-2-cdots-m-k-为两两互素的整数时，"><a href="#当-m-1-m-2-cdots-m-k-为两两互素的整数时，" class="headerlink" title="当$m_1,m_2,\cdots,m_k$为两两互素的整数时，"></a>当$m_1,m_2,\cdots,m_k$为两两互素的整数时，</h4><h4 id="设-M-prod-limits-i-1-k-m-i-，-M-i-M-div-m-i"><a href="#设-M-prod-limits-i-1-k-m-i-，-M-i-M-div-m-i" class="headerlink" title="设$ M=\prod\limits_{i=1}^{k}m_i $，$M_i=M \div m_i $"></a>设$ M=\prod\limits_{i=1}^{k}m_i $，$M_i=M \div m_i $</h4><h4 id="所以-M-i-只有在模-m-i-的时候不为零，模其他的m-都为零"><a href="#所以-M-i-只有在模-m-i-的时候不为零，模其他的m-都为零" class="headerlink" title="所以$M_i$只有在模$m_i $ 的时候不为零，模其他的m 都为零"></a>所以$M_i$只有在模$m_i $ 的时候不为零，模其他的m 都为零</h4><h4 id="由于我们想在模-m-i-时得到-a-i-，所以需要乘上-a-i-times-t-i-，其中-t-i-是-M-i-在模-m-i-意义下的乘法逆元，即-M-i-times-t-i-equiv-1-mod-m-i"><a href="#由于我们想在模-m-i-时得到-a-i-，所以需要乘上-a-i-times-t-i-，其中-t-i-是-M-i-在模-m-i-意义下的乘法逆元，即-M-i-times-t-i-equiv-1-mod-m-i" class="headerlink" title="由于我们想在模$m_i$时得到$a_i$，所以需要乘上$a_i \times t_i$，其中$t_i$是$M_i$在模$m_i$意义下的乘法逆元，即$M_i \times t_i \equiv 1 (\mod m_i)$"></a>由于我们想在模$m_i$时得到$a_i$，所以需要乘上$a_i \times t_i$，其中$t_i$是$M_i$在模$m_i$意义下的乘法逆元，即$M_i \times t_i \equiv 1 (\mod m_i)$</h4><h4 id="所以-x-sum-k-i-1-a-i-times-M-i-times-t-i-，-加上-kM-就是通解"><a href="#所以-x-sum-k-i-1-a-i-times-M-i-times-t-i-，-加上-kM-就是通解" class="headerlink" title="所以 $ x=\sum^k_{i=1} (a_i \times M_i \times t_i)$， 加上$kM$, 就是通解"></a>所以 $ x=\sum^k_{i=1} (a_i \times M_i \times t_i)$， 加上$kM$, 就是通解</h4><h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">read(n);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)&#123;</span><br><span class="line">    read(a[i]), read(m[i]);</span><br><span class="line">    M *= m[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)&#123;</span><br><span class="line">   	Mi = M / m[i];</span><br><span class="line">    ti = inv(Mi, m[i]);</span><br><span class="line">    x = (x + a[i] * Mi * ti) % M;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,57 +200,55 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/中国剩余定理/" class="archive-article-date">
-  	<time datetime="2019-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/17/中国剩余定理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">中国剩余定理(CRT)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/中国剩余定理/">中国剩余定理(CRT)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-数论 -中国剩余定理(CRT) -同余 -模板</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -260,8 +271,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
