@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>Archives: 2019/7 | Hexo</title>
+  <title>小凯的疑惑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://xzh2004.github.io/archives/2019/07/index.html">
+  <meta name="description" content="题目大意：有两种面值互质的金币无限枚，求它们最大的无法支付金额。$ 1 \leq a ,b \leq  10^9 $">
+<meta name="keywords" content="数论,题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小凯的疑惑">
+<meta property="og:url" content="http://xzh2004.github.io/2019/08/02/小凯的疑惑/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目大意：有两种面值互质的金币无限枚，求它们最大的无法支付金额。$ 1 \leq a ,b \leq  10^9 $">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-02T05:02:25.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="小凯的疑惑">
+<meta name="twitter:description" content="题目大意：有两种面值互质的金币无限枚，求它们最大的无法支付金额。$ 1 \leq a ,b \leq  10^9 $">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -146,36 +151,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-小凯的疑惑" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/中国剩余定理/" class="archive-article-date">
-  	<time datetime="2019-07-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/中国剩余定理/">中国剩余定理(CRT)</a>
+    <h1 class="article-title" itemprop="name">
+      小凯的疑惑
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/02/小凯的疑惑/" class="archive-article-date">
+  	<time datetime="2019-08-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p>有两种面值互质的金币无限枚，求它们最大的无法支付金额。<strong>$ 1 \leq a ,b \leq  10^9 $</strong></p>
+<a id="more"></a>
+<p><a href="https://www.luogu.org/problem/P3951" target="_blank" rel="noopener">题目链接</a></p>
+<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>设方程$ ax + by = c $的通解是<script type="math/tex">\left\{\begin{matrix}
+ x = x_0+bt \\ 
+ y = y_0 - at\\
+\end{matrix}\right.</script></p>
+<p>通过调节$t$，我们可以找到一组特解$(x1, y1)$， 使得$0 \leq x_1 \leq b -1$</p>
+<p>如果限定$y_1 \leq -1$，那么$c = ax_1 + by_1 \leq ax_1 - b \leq ab - a -b$</p>
+<p>也就是说答案不会超过$ab - a - b$</p>
+<p>那么答案是不是就是它呢</p>
+<hr>
+<p>接下来，我们证明$ax+by=ab-a-b$没有非负整数解</p>
+<p>反证：</p>
+<p>若存在满足条件的$(x_0,y_0)$，则$ax_0+by_0=ab-a-b$</p>
+<p>$\rightarrow a(x_0+1)+b(y_0+1)=ab$</p>
+<p>这说明$a|b(y_0+1)$，即$a|y_0+1$，则有$a≤y_0+1$</p>
+<p>对称地得到$b≤x_0+1$，那么代入得到$a(x_0+1)+b(y_0+1)\geq2ab&gt;ab$</p>
+<p>所以$ax+by=ab-a-b$没有非负整数解</p>
+<hr>
+<p>所以答案为$ab-a-b$</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,33 +209,61 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">中国剩余定理(CRT)</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">同余</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">模板</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/07/26/中国剩余定理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">中国剩余定理(CRT)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,8 +286,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
