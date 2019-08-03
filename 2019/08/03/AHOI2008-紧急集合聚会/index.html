@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>Tag: 倍增 | Spider-X</title>
+  <title>[AHOI2008]紧急集合聚会 | Spider-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Spider-X">
-<meta property="og:url" content="http://xzh2004.github.io/tags/倍增/index.html">
+  <meta name="description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[AHOI2008]紧急集合聚会">
+<meta property="og:url" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/index.html">
 <meta property="og:site_name" content="Spider-X">
+<meta property="og:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/Hexo/Code_Dream/source/_posts/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
+<meta property="og:updated_time" content="2019-08-03T04:28:08.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spider-X">
+<meta name="twitter:title" content="[AHOI2008]紧急集合聚会">
+<meta name="twitter:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
+<meta name="twitter:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/Hexo/Code_Dream/source/_posts/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Spider-X" type="application/atom+xml">
   
@@ -146,68 +152,106 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-AHOI2008-紧急集合聚会" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/03/[AHOI2008]紧急集合  聚会/" class="archive-article-date">
-  	<time datetime="2019-08-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/03/[AHOI2008]紧急集合  聚会/">AHOI2008 紧急集合/聚会</a>
+    <h1 class="article-title" itemprop="name">
+      [AHOI2008]紧急集合聚会
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">倍增</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">最近公共祖先(LCA)</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/08/03/AHOI2008-紧急集合聚会/" class="archive-article-date">
+  	<time datetime="2019-08-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p>给你三个点，让你求三个点距离和最小的点以及最小距离</p>
+<a id="more"></a>
+<p><a href="https://www.luogu.org/problem/P4281" target="_blank" rel="noopener">题目链接</a></p>
+<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>求树上最小距离，显然用LCA解决</p>
+<p>然后我们发现，三个点，两两之间的LCA，三个中有两个是相等的</p>
+<p>如下图所示</p>
+<p><img src="/2019/08/03/AHOI2008-紧急集合聚会/Hexo\Code_Dream\source\_posts\AHOI2008-紧急集合聚会\AHOI2008 紧急集合聚会.PNG" alt="AHOI2008 紧急集合聚会"></p>
+<p>进一步地，我们可以发现，这个相等的LCA是深度较小的LCA，也是三个点共同的LCA，那么剩下那个和谁也不相等的LCA就是深度较大的</p>
+<p>显然，深度较大的那个LCA才是三个点距离和最小的点。</p>
+<blockquote>
+<p>证明：</p>
+<p>采用反证法</p>
+<p>设x才是距离和最小的点。</p>
+<p>大体思路是一个点走一条路径的花费，比两个点走少</p>
+<p>$Case 1:dep(x) &lt; dep(lca)$</p>
+<p>$Case 2:dep(x) &gt; dep(lca)$</p>
+<p><del>自己拿草稿纸算一下就好了</del></p>
+<p>然后我们发现，lca的距离和比x的要小</p>
+<p>所以，x不是距离和最小的点，lca才是</p>
+</blockquote>
+<p>下面我们来推距离和，</p>
+<p>设$lca(x,y)$为深度较大的LCA，$z$为另外一个结点，$a$为$lca(x, y)$, $b$为$lca(a, z)$</p>
+<p>$Dis = dep[x]  - dep[a] + dep[y] - dep[a] + dep[z] - dep[b] + dep[a] - dep[b]$</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> swa(x, y) x ^= y ^= x ^= y</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;x)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ch,ss[<span class="number">1</span>&lt;&lt;<span class="number">17</span>],*A=ss,*B=ss;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">gc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> A==B&amp;&amp;(B=(A=ss)+fread(ss,<span class="number">1</span>,<span class="number">1</span>&lt;&lt;<span class="number">17</span>,<span class="built_in">stdin</span>),A==B)?EOF:*A++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">500010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cnt, n, q;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> head[N];</span><br><span class="line"><span class="keyword">int</span> fa[<span class="number">20</span>][N];</span><br><span class="line"><span class="keyword">int</span> q_now[N];</span><br><span class="line"><span class="keyword">int</span> q_lst[N];</span><br><span class="line"><span class="keyword">int</span> dep[N];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> nxt, to;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    e[++cnt].to = y;</span><br><span class="line">    e[cnt].nxt = head[x];</span><br><span class="line">    head[x] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> rt)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">1</span>, r = <span class="number">1</span>;</span><br><span class="line">    q_now[<span class="number">1</span>] = rt;</span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r)&#123;</span><br><span class="line">        <span class="keyword">int</span> u = q_now[l], father = q_lst[l];</span><br><span class="line">        ++l;</span><br><span class="line">        fa[<span class="number">0</span>][u]= father;</span><br><span class="line">        dep[u] = dep[father] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="number">1</span> &lt;&lt; i) &lt;= dep[u]; ++i)</span><br><span class="line">            fa[i][u] = fa[i - <span class="number">1</span>][fa[i - <span class="number">1</span>][u]];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt)&#123;</span><br><span class="line">            <span class="keyword">int</span> v = e[i].to;</span><br><span class="line">            <span class="keyword">if</span> (v != father)&#123;</span><br><span class="line">                q_now[++r] = v;</span><br><span class="line">                q_lst[r] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lca</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (dep[u] &lt; dep[v]) swa(u, v);</span><br><span class="line">    <span class="keyword">int</span> del = dep[u] - dep[v];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (del &amp; (<span class="number">1</span> &lt;&lt; i)) u = fa[i][u];</span><br><span class="line">    <span class="keyword">if</span> (u == v) <span class="keyword">return</span> v;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">19</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">        <span class="keyword">if</span> (fa[i][u] != fa[i][v]) </span><br><span class="line">            u = fa[i][u], v = fa[i][v];</span><br><span class="line">    <span class="keyword">return</span> fa[<span class="number">0</span>][u];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x, y, z, tag1, tag2;</span><br><span class="line">    read(n), read(q);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i)&#123;</span><br><span class="line">        read(x), read(y);</span><br><span class="line">        add_edge(x, y);</span><br><span class="line">        add_edge(y, x);</span><br><span class="line">    &#125;</span><br><span class="line">    bfs(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span> (q--)&#123;</span><br><span class="line">        read(x), read(y), read(z);</span><br><span class="line">        <span class="keyword">int</span> lca1 = lca(x, y), lca2 = lca(x, z), lca3 = lca(y, z), lca4 = lca(lca1, z);</span><br><span class="line">        <span class="comment">//分类讨论，找出深度较大，和谁也不相等的那个LCA</span></span><br><span class="line">        <span class="keyword">if</span> (lca1 == lca2)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca3, dep[y] - dep[lca3] + dep[z] - dep[lca3]  + dep[x] - dep[lca4] + dep[lca3] - dep[lca4]);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (lca1 == lca3)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca2, dep[x] - dep[lca2]  + dep[z] - dep[lca2] + dep[y] - dep[lca4] + dep[lca2] - dep[lca4]);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca1, dep[x] - dep[lca1] + dep[y] - dep[lca1] + dep[z] - dep[lca4] + dep[lca1] - dep[lca4]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;x)</span></span>&#123;</span><br><span class="line">    x = <span class="number">0</span>;</span><br><span class="line">    _Tp sign = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (ch ^ <span class="number">45</span> &amp;&amp; (ch &lt; <span class="number">48</span> || ch &gt; <span class="number">57</span>)) ch = gc();</span><br><span class="line">    <span class="keyword">if</span> (ch == <span class="number">45</span>) sign = <span class="number">1</span>, ch = gc();</span><br><span class="line">    <span class="keyword">while</span> (ch &gt; <span class="number">47</span> &amp;&amp; ch &lt; <span class="number">58</span>)&#123;</span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) + (x &lt;&lt; <span class="number">3</span>) + (ch ^ <span class="number">48</span>);</span><br><span class="line">        ch = gc();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sign) x = -x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; <span class="number">0</span> ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; y ? x : y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
 
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/03/最近公共祖先(LCA)习题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">最近公共祖先(LCA)习题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +274,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -300,22 +344,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">倍增</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题解</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
@@ -329,6 +357,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">模板</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题单</a>
               </li>
             
             <div class="clearfix"></div>
