@@ -9,18 +9,19 @@
   <title>[AHOI2008]紧急集合聚会 | Spider-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
+<meta name="keywords" content="最近公共祖先(LCA),倍增,题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[AHOI2008]紧急集合聚会">
 <meta property="og:url" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/index.html">
 <meta property="og:site_name" content="Spider-X">
 <meta property="og:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/Hexo/Code_Dream/source/_posts/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
-<meta property="og:updated_time" content="2019-08-03T04:28:08.455Z">
+<meta property="og:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
+<meta property="og:updated_time" content="2019-08-03T04:35:33.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[AHOI2008]紧急集合聚会">
 <meta name="twitter:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
-<meta name="twitter:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/Hexo/Code_Dream/source/_posts/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
+<meta name="twitter:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Spider-X" type="application/atom+xml">
   
@@ -178,7 +179,7 @@
 <h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>求树上最小距离，显然用LCA解决</p>
 <p>然后我们发现，三个点，两两之间的LCA，三个中有两个是相等的</p>
 <p>如下图所示</p>
-<p><img src="/2019/08/03/AHOI2008-紧急集合聚会/Hexo\Code_Dream\source\_posts\AHOI2008-紧急集合聚会\AHOI2008 紧急集合聚会.PNG" alt="AHOI2008 紧急集合聚会"></p>
+<p><img src="/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008 紧急集合聚会.PNG" alt="AHOI2008 紧急集合聚会"></p>
 <p>进一步地，我们可以发现，这个相等的LCA是深度较小的LCA，也是三个点共同的LCA，那么剩下那个和谁也不相等的LCA就是深度较大的</p>
 <p>显然，深度较大的那个LCA才是三个点距离和最小的点。</p>
 <blockquote>
@@ -203,6 +204,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">最近公共祖先(LCA)</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">倍增</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -344,6 +364,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">倍增</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题单</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
@@ -357,18 +393,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">模板</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题解</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题单</a>
               </li>
             
             <div class="clearfix"></div>
