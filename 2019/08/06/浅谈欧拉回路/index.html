@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>[AHOI2008]紧急集合聚会 | Spider-X</title>
+  <title>浅谈欧拉回路 | Spider-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
-<meta name="keywords" content="最近公共祖先(LCA),倍增,题解">
+  <meta name="description" content="欧拉回路问题，通俗的讲就是一笔画问题">
+<meta name="keywords" content="学习笔记,欧拉回路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[AHOI2008]紧急集合聚会">
-<meta property="og:url" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/index.html">
+<meta property="og:title" content="浅谈欧拉回路">
+<meta property="og:url" content="http://xzh2004.github.io/2019/08/06/浅谈欧拉回路/index.html">
 <meta property="og:site_name" content="Spider-X">
-<meta property="og:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
+<meta property="og:description" content="欧拉回路问题，通俗的讲就是一笔画问题">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
-<meta property="og:updated_time" content="2019-08-03T04:38:38.395Z">
+<meta property="og:image" content="http://xzh2004.github.io/2019/08/06/浅谈欧拉回路/1.png">
+<meta property="og:image" content="http://xzh2004.github.io/2019/08/06/浅谈欧拉回路/2.PNG">
+<meta property="og:updated_time" content="2019-08-05T16:04:48.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[AHOI2008]紧急集合聚会">
-<meta name="twitter:description" content="题目大意：给你三个点，让你求三个点距离和最小的点以及最小距离">
-<meta name="twitter:image" content="http://xzh2004.github.io/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008%20紧急集合聚会.PNG">
+<meta name="twitter:title" content="浅谈欧拉回路">
+<meta name="twitter:description" content="欧拉回路问题，通俗的讲就是一笔画问题">
+<meta name="twitter:image" content="http://xzh2004.github.io/2019/08/06/浅谈欧拉回路/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Spider-X" type="application/atom+xml">
   
@@ -153,50 +154,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AHOI2008-紧急集合聚会" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-浅谈欧拉回路" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      [AHOI2008]紧急集合聚会
+      浅谈欧拉回路
     </h1>
   
 
         
-        <a href="/2019/08/03/AHOI2008-紧急集合聚会/" class="archive-article-date">
-  	<time datetime="2019-08-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
+        <a href="/2019/08/06/浅谈欧拉回路/" class="archive-article-date">
+  	<time datetime="2019-08-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p>给你三个点，让你求三个点距离和最小的点以及最小距离</p>
-<a id="more"></a>
-<p><a href="https://www.luogu.org/problem/P4281" target="_blank" rel="noopener">题目链接</a></p>
-<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>求树上最小距离，显然用LCA解决</p>
-<p>然后我们发现，三个点，两两之间的LCA，三个中有两个是相等的</p>
-<p>如下图所示</p>
-<p><img src="/2019/08/03/AHOI2008-紧急集合聚会/AHOI2008 紧急集合聚会.PNG" alt="AHOI2008 紧急集合聚会"></p>
-<p>进一步地，我们可以发现，这个相等的LCA是深度较小的LCA，也是三个点共同的LCA，那么剩下那个和谁也不相等的LCA就是深度较大的</p>
-<p>显然，深度较大的那个LCA才是三个点距离和最小的点。</p>
-<blockquote>
-<p>证明：</p>
-<p>采用反证法</p>
-<p>设x才是距离和最小的点。</p>
-<p>大体思路是一个点走一条路径的花费，比两个点走少</p>
-<p>$Case 1:dep(x) &lt; dep(lca)$</p>
-<p>$Case 2:dep(x) &gt; dep(lca)$</p>
-<p><del>自己拿草稿纸算一下就好了</del></p>
-<p>然后我们发现，lca的距离和比x的要小</p>
-<p>所以，x不是距离和最小的点，lca才是</p>
+        <blockquote>
+<p>欧拉回路问题，通俗的讲就是一笔画问题</p>
 </blockquote>
-<p>下面我们来推距离和，</p>
-<p>设$lca(x,y)$为深度较大的LCA，$z$为另外一个结点，$a$为$lca(x, y)$, $b$为$lca(a, z)$</p>
-<p>$Dis = dep[x]  - dep[a] + dep[y] - dep[a] + dep[z] - dep[b] + dep[a] - dep[b]$</p>
-<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> swa(x, y) x ^= y ^= x ^= y</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;x)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ch,ss[<span class="number">1</span>&lt;&lt;<span class="number">17</span>],*A=ss,*B=ss;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">gc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> A==B&amp;&amp;(B=(A=ss)+fread(ss,<span class="number">1</span>,<span class="number">1</span>&lt;&lt;<span class="number">17</span>,<span class="built_in">stdin</span>),A==B)?EOF:*A++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">500010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cnt, n, q;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> head[N];</span><br><span class="line"><span class="keyword">int</span> fa[<span class="number">20</span>][N];</span><br><span class="line"><span class="keyword">int</span> q_now[N];</span><br><span class="line"><span class="keyword">int</span> q_lst[N];</span><br><span class="line"><span class="keyword">int</span> dep[N];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> nxt, to;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    e[++cnt].to = y;</span><br><span class="line">    e[cnt].nxt = head[x];</span><br><span class="line">    head[x] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> rt)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">1</span>, r = <span class="number">1</span>;</span><br><span class="line">    q_now[<span class="number">1</span>] = rt;</span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r)&#123;</span><br><span class="line">        <span class="keyword">int</span> u = q_now[l], father = q_lst[l];</span><br><span class="line">        ++l;</span><br><span class="line">        fa[<span class="number">0</span>][u]= father;</span><br><span class="line">        dep[u] = dep[father] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="number">1</span> &lt;&lt; i) &lt;= dep[u]; ++i)</span><br><span class="line">            fa[i][u] = fa[i - <span class="number">1</span>][fa[i - <span class="number">1</span>][u]];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt)&#123;</span><br><span class="line">            <span class="keyword">int</span> v = e[i].to;</span><br><span class="line">            <span class="keyword">if</span> (v != father)&#123;</span><br><span class="line">                q_now[++r] = v;</span><br><span class="line">                q_lst[r] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lca</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (dep[u] &lt; dep[v]) swa(u, v);</span><br><span class="line">    <span class="keyword">int</span> del = dep[u] - dep[v];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (del &amp; (<span class="number">1</span> &lt;&lt; i)) u = fa[i][u];</span><br><span class="line">    <span class="keyword">if</span> (u == v) <span class="keyword">return</span> v;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">19</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">        <span class="keyword">if</span> (fa[i][u] != fa[i][v]) </span><br><span class="line">            u = fa[i][u], v = fa[i][v];</span><br><span class="line">    <span class="keyword">return</span> fa[<span class="number">0</span>][u];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x, y, z, tag1, tag2;</span><br><span class="line">    read(n), read(q);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i)&#123;</span><br><span class="line">        read(x), read(y);</span><br><span class="line">        add_edge(x, y);</span><br><span class="line">        add_edge(y, x);</span><br><span class="line">    &#125;</span><br><span class="line">    bfs(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span> (q--)&#123;</span><br><span class="line">        read(x), read(y), read(z);</span><br><span class="line">        <span class="keyword">int</span> lca1 = lca(x, y), lca2 = lca(x, z), lca3 = lca(y, z), lca4 = lca(lca1, z);</span><br><span class="line">        <span class="comment">//分类讨论，找出深度较大，和谁也不相等的那个LCA</span></span><br><span class="line">        <span class="keyword">if</span> (lca1 == lca2)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca3, dep[y] - dep[lca3] + dep[z] - dep[lca3]  + dep[x] - dep[lca4] + dep[lca3] - dep[lca4]);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (lca1 == lca3)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca2, dep[x] - dep[lca2]  + dep[z] - dep[lca2] + dep[y] - dep[lca4] + dep[lca2] - dep[lca4]);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, lca1, dep[x] - dep[lca1] + dep[y] - dep[lca1] + dep[z] - dep[lca4] + dep[lca1] - dep[lca4]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">(_Tp &amp;x)</span></span>&#123;</span><br><span class="line">    x = <span class="number">0</span>;</span><br><span class="line">    _Tp sign = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (ch ^ <span class="number">45</span> &amp;&amp; (ch &lt; <span class="number">48</span> || ch &gt; <span class="number">57</span>)) ch = gc();</span><br><span class="line">    <span class="keyword">if</span> (ch == <span class="number">45</span>) sign = <span class="number">1</span>, ch = gc();</span><br><span class="line">    <span class="keyword">while</span> (ch &gt; <span class="number">47</span> &amp;&amp; ch &lt; <span class="number">58</span>)&#123;</span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) + (x &lt;&lt; <span class="number">3</span>) + (ch ^ <span class="number">48</span>);</span><br><span class="line">        ch = gc();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sign) x = -x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">ab</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; <span class="number">0</span> ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mx</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tp&gt; <span class="keyword">inline</span> _<span class="function">Tp <span class="title">mn</span><span class="params">(<span class="keyword">const</span> _Tp &amp;x, <span class="keyword">const</span> _Tp &amp;y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &lt; y ? x : y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><p><strong>欧拉通路</strong>: 通过图中每条边且只通过一次，并且经过每一顶点的通路</p>
+<p><strong>欧拉回路</strong>: 通过图中每条边且只通过一次，并且经过每一顶点的回路</p>
+<p><strong>有向图的基图</strong>：忽略有向图所有边的方向，得到的无向图称为该有向图的基图。 </p>
+<hr>
+<h5 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h5><p>  设G是连通无向图，则称经过G的每条边一次并且仅一次的路径为欧拉通路；</p>
+<p> 如果欧拉通路是回路（起点和终点是同一个顶点），则称此回路是欧拉回路</p>
+<p>  具有欧拉回路的无向图G成为欧拉图</p>
+<h5 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h5><p> 无向图G存在欧拉通路的充要条件是：<strong>G为连通图，并且G仅有两个奇度结点（度数为奇数的顶点）或者无奇度结点</strong>。</p>
+<h5 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h5><p>（1） 当G是仅有两个奇度结点的连通图时，G的欧拉通路必以此两个结点为端点；</p>
+<p>（2）当G是无奇度结点的连通图时，G必有欧拉回路</p>
+<p>（3）G为欧拉图（存在欧拉回路）的充分必要条件是  G为无奇度结点的连通图</p>
+<hr>
+<h5 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h5><p>（1）设D是有向图，D的基图连通，则称经过D的每条边一次并且仅有一次的有向路径为 有向欧拉通路</p>
+<p>（2）如果有向欧拉通路是有向回路，则称此有向回路为  有向欧拉回路</p>
+<p>（3）具有有向欧拉回路的图D称为有向欧拉图</p>
+<h5 id="定理-1"><a href="#定理-1" class="headerlink" title="定理"></a>定理</h5><p>有向图D存在欧拉通路的充要条件是：<strong>D为有向图，D的基图连通，并且所有顶点的出度与入度相等；或者  除两个顶点外，其余顶点的出度与入度都相等，而这两个顶点中一个顶点的出度与入度之差为1，另一个顶点的出度与入度之差为-1.</strong></p>
+<h5 id="推论-1"><a href="#推论-1" class="headerlink" title="推论"></a>推论</h5><p>（1）当D除出、入度之差为1，-1的两个顶点之外，其余顶点的出度与入度相等时，D的有向欧拉通路必以出、入度之差为1的顶点作为始点，以出、入度之差为-1的顶点作为终点。</p>
+<p>（2）当D的所有顶点的出、入度都相等时，D中存在有向欧拉回路。</p>
+<p>（3）有向图D为有向欧拉图的充要条件是  D的基图为连通图，并且所有顶点的出、入度都相等</p>
+<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><h4 id="1、Hierholzers算法"><a href="#1、Hierholzers算法" class="headerlink" title="1、Hierholzers算法"></a>1、Hierholzers算法</h4><p>该算法也就是大家所熟知的用$dfs$求欧拉回路的算法，该算法可用来解决有向图和无向图的欧拉回路问题</p>
+<p>算法流程（无向图）：</p>
+<p>1.判断奇点数。奇点数若为0则任意指定起点，奇点数若为2则指定起点为奇点。</p>
+<p>2.开始递归函数$Hierholzers(x)$:<br>　　循环寻找与$x$相连的边$(x,u)$:<br>　　　　删除$(x,u)$<br>　　　　删除$(u,x)$<br>　　　　$Hierholzers(u)$;  //递归！<br>　　将$x$插入答案队列之中</p>
+<p>3.倒序输出答案队列</p>
+<p><img src="/2019/08/06/浅谈欧拉回路/1.png" alt="1"></p>
+<p>对于该图，算法的执行流程如下：<br>1.找到该图没有奇点，从1开始进行Hierholzers算法。<br>2.删边$1-2$ 递归到2<br>3.删边$2-3$ 递归到3<br>4.删边$3-7$ 递归到7<br>5.删边$7-1$ 递归到1<br>6.1无边，1加入队列，返回<br>7.7加入队列，返回<br>8.删边$3-4$ 递归到4<br>9.删边$4-5$ 递归到5<br>10.删边$5-6$ 递归到6<br>11.删边$6-3$ 递归到3<br>12.3加入队列，返回<br>13.6加入队列，返回<br>14.5加入队列，返回<br>15.4加入队列，返回<br>16.3加入队列，返回<br>17.2加入队列，返回<br>18.1加入队列，返回</p>
+<p>答案队列为：1 7 3 6 5 4 3 2 1。反向输出即为答案。</p>
+<p>有向图除判断是否存在有一点点不同以外同理。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)&#123;</span><br><span class="line">        <span class="keyword">if</span> (g[u][i])&#123;</span><br><span class="line">            --g[u][i];</span><br><span class="line">            --g[i][u];</span><br><span class="line">            dfs(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stk[++cnt] = u;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(cnt) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, stk[cnt--]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="关于上列代码，为何不能在函数头直接输出（因为dfs就是个栈啊）？"><a href="#关于上列代码，为何不能在函数头直接输出（因为dfs就是个栈啊）？" class="headerlink" title="关于上列代码，为何不能在函数头直接输出（因为dfs就是个栈啊）？"></a>关于上列代码，为何不能在函数头直接输出（因为dfs就是个栈啊）？</h5><p><img src="/2019/08/06/浅谈欧拉回路/2.PNG" alt="2"></p>
+<p>上述图片就是个反例</p>
+<p>假设$dfs$遍历的顺序为：</p>
+<p>$1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6$，</p>
+<p>回溯$6-&gt;5-&gt;4-&gt;3$</p>
+<p>$3-&gt;7-&gt;8$</p>
+<p>回溯$8-&gt;7-&gt;3-&gt;2-&gt;1$</p>
+<p>如果直接输出，那么答案为$1,2,3,4,5,6,4,7,8,3$</p>
+<p>如果放在栈里，那么答案为$1,2,3,7,8,3,4,5,6,4$</p>
+<p>显然第一种是错误的，第二种是正确的</p>
+<p>至于为什么，请读者自己思考</p>
+<h5 id="关于使用链式前向星存图如何实现该算法？"><a href="#关于使用链式前向星存图如何实现该算法？" class="headerlink" title="关于使用链式前向星存图如何实现该算法？"></a>关于使用链式前向星存图如何实现该算法？</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无向图</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> id)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (t &lt; <span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> (id &amp; <span class="number">1</span>) vis[id] = vis[id + <span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> vis[id] = vis[id - <span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> vis[id] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> &amp;i = head[u]; i; i = e[i].nxt)&#123;<span class="comment">//这里的引用&amp;是关键</span></span><br><span class="line">        <span class="keyword">if</span> (vis[i]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">int</span> v = e[i].to;</span><br><span class="line">        dfs(v, i);</span><br><span class="line">    &#125;</span><br><span class="line">    stk[++cnt] = id;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="2、Fluery算法"><a href="#2、Fluery算法" class="headerlink" title="2、Fluery算法"></a>2、Fluery算法</h4><p>此坑待填QAQ</p>
+<hr>
+<h4 id="板子题："><a href="#板子题：" class="headerlink" title="板子题："></a>板子题：</h4><ul>
+<li><a href="https://www.luogu.org/problem/P2731" target="_blank" rel="noopener">骑马修栅栏</a></li>
+<li><a href="https://www.luogu.org/problem/P1341" target="_blank" rel="noopener">无序字母对</a></li>
+<li><a href="http://uoj.ac/problem/117" target="_blank" rel="noopener">UOJ 欧拉回路</a></li>
+</ul>
+<hr>
+<p>以上资料摘自：</p>
+<p><a href="https://blog.csdn.net/qq_41730082/article/details/84927199" target="_blank" rel="noopener">https://blog.csdn.net/qq_41730082/article/details/84927199</a></p>
+<p><a href="https://blog.csdn.net/m0_38033475/article/details/80042326" target="_blank" rel="noopener">https://blog.csdn.net/m0_38033475/article/details/80042326</a></p>
+<p><a href="https://blog.csdn.net/guomutian911/article/details/42105127" target="_blank" rel="noopener">https://blog.csdn.net/guomutian911/article/details/42105127</a></p>
+
       
 
       
@@ -209,15 +245,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">最近公共祖先(LCA)</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">倍增</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">欧拉回路</a>
         		</li>
       		
 		</ul>
@@ -236,18 +268,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/04/高级打字机/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          高级打字机
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/03/可持久化线段树(主席树)习题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">可持久化线段树(主席树)习题</div>
+    <a href="/2019/08/06/货车运输/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">货车运输</div>
       <i class="icon-circle-right"></i>
     </a>
   
