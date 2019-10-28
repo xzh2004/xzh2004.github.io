@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://xzh2004.github.io">
-  <title>加减序列 | Spider-X</title>
+  <title>加减序列 BZOJ3043 | Spider-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目：【问题描述】给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。【输入格式】第一行一个正整数n；接下来n行，每行一个整数，第i+1行的整数表示ai。【输出格式】第一行输出最少操作次数；第二行输出最终能得到多少种结果。 分析：设$b_i">
+  <meta name="description" content="题目：给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。">
 <meta name="keywords" content="题解,差分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="加减序列">
+<meta property="og:title" content="加减序列 BZOJ3043">
 <meta property="og:url" content="http://xzh2004.github.io/2019/10/28/加减序列 BZOJ3043/index.html">
 <meta property="og:site_name" content="Spider-X">
-<meta property="og:description" content="题目：【问题描述】给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。【输入格式】第一行一个正整数n；接下来n行，每行一个整数，第i+1行的整数表示ai。【输出格式】第一行输出最少操作次数；第二行输出最终能得到多少种结果。 分析：设$b_i">
+<meta property="og:description" content="题目：给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-28T03:20:54.108Z">
+<meta property="og:updated_time" content="2019-10-28T03:26:52.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="加减序列">
-<meta name="twitter:description" content="题目：【问题描述】给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。【输入格式】第一行一个正整数n；接下来n行，每行一个整数，第i+1行的整数表示ai。【输出格式】第一行输出最少操作次数；第二行输出最终能得到多少种结果。 分析：设$b_i">
+<meta name="twitter:title" content="加减序列 BZOJ3043">
+<meta name="twitter:description" content="题目：给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。">
   
     <link rel="alternative" href="/atom.xml" title="Spider-X" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      加减序列
+      加减序列 BZOJ3043
     </h1>
   
 
@@ -171,7 +171,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>【问题描述】<br>给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。<br>问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。<br>【输入格式】<br>第一行一个正整数n；<br>接下来n行，每行一个整数，第i+1行的整数表示ai。<br>【输出格式】<br>第一行输出最少操作次数；<br>第二行输出最终能得到多少种结果。</p>
+        <h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>给定一个长度为n的数列{a1,a2…an}，每次可以选择一个区间[l,r]，使这个区间内的数都加一或者都减一。问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下,最终得到的数列有多少种。</p>
+<a id="more"></a>
+<h5 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h5><p>第一行一个正整数n；<br>接下来n行，每行一个整数，第i+1行的整数表示ai。</p>
+<h5 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h5><p>第一行输出最少操作次数；<br>第二行输出最终能得到多少种结果。</p>
 <h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>设$b_i = a_i - a_{i-1}$，$sum_1 = \sum b_i(b_i＞0), sum_2 = \sum |b_i|(b_i&lt;0)$</p>
 <p>因为要所有数都相等</p>
 <p>故差分数组$b_2,b_3,…,bn$都为0</p>
@@ -359,7 +362,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">差分</a>
+                <a href="javascript:void(0)" class="js-tag color4">位运算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">交互题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -379,11 +386,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">位运算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">交互题</a>
+                <a href="javascript:void(0)" class="js-tag color3">差分</a>
               </li>
              
               <li class="article-tag-list-item">
