@@ -9,14 +9,14 @@
   <title>CF1207E XOR Guessing | Spider-X</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言：本人写过的第一道交互题！">
-<meta name="keywords" content="位运算,题解,交互题">
+<meta name="keywords" content="题解,位运算,交互题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF1207E XOR Guessing">
 <meta property="og:url" content="http://xzh2004.github.io/2019/08/28/CF1207E XOR Guessing/index.html">
 <meta property="og:site_name" content="Spider-X">
 <meta property="og:description" content="前言：本人写过的第一道交互题！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-28T12:54:20.894Z">
+<meta property="og:updated_time" content="2019-10-04T13:35:24.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CF1207E XOR Guessing">
 <meta name="twitter:description" content="前言：本人写过的第一道交互题！">
@@ -173,8 +173,9 @@
       
         <h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>本人写过的第一道交互题！</p>
 <a id="more"></a>
-<h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p><a href="http://codeforces.com/problemset" target="_blank" rel="noopener">题目链接</a></p>
-<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>第一个询问中的一百个数用14个二进制位中前7个二进制位是0的数字</p>
+<h4 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h4><p>猜一个有14个二进制位的数字</p>
+<p><a href="http://codeforces.com/problemset" target="_blank" rel="noopener">题目链接</a></p>
+<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>第一个询问中的一百个数用14个二进制位中前7个二进制位是0的数字来</p>
 <p>第二个询问中的一百个数用14个二进制位中后7个二进制位是1的数字</p>
 <hr>
 <p>下面是这题的特色——交互</p>
@@ -194,11 +195,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">位运算</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">位运算</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -220,6 +221,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/10/28/加减序列 BZOJ3043/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          加减序列
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/06/浅谈欧拉回路/" id="article-nav-older" class="article-nav-link-wrap">
@@ -349,6 +359,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">倍增</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">差分</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
@@ -369,19 +395,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题解</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">交互题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">最近公共祖先(LCA)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">倍增</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -390,10 +404,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">最大生成树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">可持久化线段树(主席树)</a>
               </li>
             
             <div class="clearfix"></div>
